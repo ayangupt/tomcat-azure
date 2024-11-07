@@ -1,7 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.example</groupId>
@@ -18,9 +16,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- Azure Properties -->
-    <azure.resourceGroup>tomcatDemo</azure.resourceGroup>
-    <azure.appName>helloayu</azure.appName>
-    <azure.region>southcentralus</azure.region>
+    <azure.resourceGroup>{your_resource_group_name}</azure.resourceGroup>
+    <azure.appName>{your_app_name}</azure.appName>
+    <azure.region>{your_region}</azure.region>
   </properties>
 
   <dependencies>
@@ -85,9 +83,9 @@
     <artifactId>azure-webapp-maven-plugin</artifactId>
     <version>2.10.0</version>
     <configuration>
-        <resourceGroup>{azure.resourceGroup}</resourceGroup>
-        <appName>{azure.appName}</appName>
-        <region>{azure.region}</region>
+        <resourceGroup>MyResourceGroup</resourceGroup>
+        <appName>tomcatmavendemo</appName>
+        <region>centralus</region>
         <pricingTier>B1</pricingTier>
         <runtime>
             <os>linux</os>
